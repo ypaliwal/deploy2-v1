@@ -3,69 +3,73 @@
 <head>
 	<title>TEAM Paliwal | Toronto, Oakville, Mississauga Real Estate Projects</title>
 
+	<!-- CSS STYLING (VENDOR AND OWN) -->
 	<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/blog.css">
+
+	<!-- VENDOR JS -->
+	<!-- <script type="text/javascript" src="js/vendor/jquery-1.12.2.js"></script> -->
+	<script type="text/javascript" src="js/vendor/angular.js"></script>
+	<script type="text/javascript" src="js/vendor/angular-ui-router.js"></script>
+	<!-- <script src="js/vendor/angular-route.js"></script> -->
+
+	<!-- APP.JS AND CONTROLLERS -->
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="site/controllers/main.ctrl.js"></script>
+	<script type="text/javascript" src="site/controllers/map.ctrl.js"></script>
+	<script type="text/javascript" src="site/controllers/about.ctrl.js"></script>
+
+	<!-- SERVICES -->
+	<script type="text/javascript" src="site/services/projects.srv.js"></script>
+
 </head>
 
-<body>
-<div class="container-fluid">
-	<div class="row">
-		<div class="above-nav col-sm-8 col-sm-offset-2">
-			<span class="left newFont">contact@teampaliwal.com</span>
-			<span class="right newFont">416.823.1248</span>
-		</div>
-	</div>
-</div>
-<!-- NAVBAR (LOGO, BUTTONS) -->
-<div class="row">
-<div class="container-fluid">
-	<nav class="navbar navbar-default">
-			<div class="col-sm-8 col-sm-offset-2">
-				<div class="nav-left">
-					<img src="imgs/logo.png">
-					<div><p>Pre-Construction Buyers' Guide</p></div>
-				</div>
-				<div class="nav-right">
-					<ul>
-						<a href=""><li>Projects</li></a>
-						<a href=""><li>About</li></a>
-						<a href=""><li>Blog</li></a>
-					</ul>
-				</div>
-			</div>
-	</nav>
-
+<body ng-app="TPapp">
 	<div class="container-fluid">
-		<div class="col-sm-8 col-sm-offset-2">
-			<p class="text-center welcome-text newFont">Welcome to Team Paliwal!<br>We're a comprehensive team of REALTORs serving the GTA.
-			<br>
-			<br>
-			<img src="imgs/full-logo-on-white.jpg" class="lrgLogo">
-			<br>
-			<br>
-			<span class="welcome-text-small">This website will provide you with listings of the hotest pre-construction and new projects in the GTA, along with market news and professional advice.</span>
-			</p>
-			<hr>
-			
-			<br>
-			<!-- MAP IMAGE -->
-			<div class="col-sm-6 thumbnail">
-		        <img src="imgs/sml-map.jpg">
-	        </div>
-	        <div class="col-sm-6 toCenter">
-	        	<p class="text-center sml-map-text newFont">Click below to view a comprehensive, visual listing of all projects in the Greater Toronto Area.</p>
-	        	<button class="mapBtn btn btn-default newFont">View Map of Properties</button>
-	        </div>
+		<div class="row">
+			<div class="above-nav col-sm-8 col-sm-offset-2">
+				<span class="left newFont">contact@teampaliwal.com</span>
+				<span class="right newFont">416.823.1248</span>
+			</div>
 		</div>
 	</div>
-</div>
-</div>
+
+	<!-- NAVBAR (LOGO, BUTTONS) -->
+	<div class="row">
+	<div class="container-fluid">
+		<nav class="navbar navbar-default">
+				<div class="col-sm-8 col-sm-offset-2">
+					<div class="nav-left">
+						<a ui-sref="main"><img src="imgs/logo.png"></a>
+						<div><p>Pre-Construction Buyers' Guide</p></div>
+					</div>
+					<div class="nav-right">
+						<ul>
+							<a ui-sref="main"><li>Projects</li></a>
+							<a ui-sref="about"><li>About</li></a>
+							<a ui-sref="blog"><li>Blog</li></a>
+						</ul>
+					</div>
+				</div>
+		</nav>
+	</div>
+	</div>
+
+	<div ui-view class="wrapper"></div>
+	
+
+	<!-- - Add modal - add fake map, create fake map (thumbnail it)
+	- Add routing
+	- Create basic pages for About and Blog (just test page is good)
+	- Create images for Projects listings -->
+
+	<!-- FOOTER -->
+	<footer>
+		
+	</footer>
 
 
-
-	<script type="text/javascript" src="js/vendor/jquery-1.12.2.js"></script>
-	<script type="text/javascript" src="js/vendor/angular.js"></script>
-	<script src="js/vendor/angular-route.js">
-	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
