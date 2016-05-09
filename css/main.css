@@ -18,13 +18,27 @@
 	margin-right: 55px;
 }
 
+.text-right {
+	text-align: right;
+}
+
+sdlfalk;sdfj
+
+#h1 {
+	font-size: 40px;
+}
+
+#h2 {
+	font-size: 30px;
+}
+
 .lrgLogo {
 	width: 210px;
 	height: auto;
 }
 
 .welcome-text-small {
-	font-size: 22px;
+	font-size: 19px;
 }
 
 .sml-map-text {
@@ -66,16 +80,46 @@ hr {
 	color: white;
 }
 
-.projects-imgs {
-	max-height: 165px;
-	width: 100%;
-	
-}
-
 .spacing-projects {
 	height: 10px;
-
 }
+
+caption {
+	text-align: left;
+	font-size: 18px;
+}
+
+.projects-imgs {
+	max-height: 145px;
+	width: 100%;	
+}
+
+.text-left {
+	text-align: left;
+}
+
+.project-name {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.project-text-div {
+	/*display:inline;
+	word-wrap: break-word;*/
+}
+
+.project-text-left {
+	float: left;
+	text-align: left;
+	font-size: 16px;
+}
+
+.project-text-right {
+	font-size: 16px;
+	float: right;
+}
+
+
 
 
 
