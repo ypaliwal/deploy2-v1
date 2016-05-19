@@ -10,6 +10,7 @@
 		// Public Variables
 		self.condoProjects = [];
 		self.resProjects = [];
+		self.allProjects = [];
 
 		// Public functions
 		self.addCondoProject = addCondoProject;
@@ -17,10 +18,12 @@
 
 		function addCondoProject(obj) {
 			self.condoProjects.push(obj);
+			self.allProjects.push(obj);
 		}
 
 		function addResProject(obj) {
 			self.resProjects.push(obj);
+			self.allProjects.push(obj);
 		}
 
 		// ADD CONDO PROJECTS
@@ -71,7 +74,7 @@
 
 			addResProject({
 				name: 'Sutton Collection Townhomes',
-				location: '',
+				location: 'Toronto',
 				price: '$1.5 million',
 				occupancy: 'Regent Park',
 				img: 'imgs/projects/res/sutton_res.png'

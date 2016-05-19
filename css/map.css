@@ -19,3 +19,11 @@ h3 {
 .spacing-under-map {
 	height: 150px;
 }
+
+.behind-map-text {
+	position: absolute;
+    top: 200px;
+    left: 40%;
+	z-index: -5;
+
+}

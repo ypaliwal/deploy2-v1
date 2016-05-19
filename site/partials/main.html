@@ -57,7 +57,7 @@
 				<br>
 				<div class="project-box">
 					<!-- Some image, then starting price, location, name, more info button -->
-					<div class="thumbnail" ng-repeat="condo in ctrl.projectSrv.condoProjects">
+					<div class="thumbnail thumbnailHover" ng-repeat="condo in ctrl.projectSrv.condoProjects"><div ng-click="ctrl.openModal(condo.name)">
 						<p class="text-left project-name">{{condo.name}}</p>
 						<img src="{{condo.img}}" class="projects-imgs">
 						<div class="project-text-div">
@@ -65,7 +65,7 @@
 							<p class="project-text-right">Starting From: {{condo.price}}</p>
 						</div>
 						<br>
-					</div>
+					</div></div>
 					
 				</div>
 			</div>
@@ -75,7 +75,7 @@
 				<br>
 				<div class="project-box">
 					<!-- Some image, then starting price, location, name, more info button -->
-					<div class="thumbnail" ng-repeat="condo in ctrl.projectSrv.resProjects">
+					<div ng-click="ctrl.openModal(condo.name)" class="thumbnail thumbnailHover" ng-repeat="condo in ctrl.projectSrv.resProjects">
 						<p class="text-left project-name">{{condo.name}}</p>
 						<img src="{{condo.img}}" class="projects-imgs">
 						<div class="project-text-div">
@@ -87,6 +87,28 @@
 					<br>
 					
 				</div>
+			</div>
+
+
+			<!-- PROJECT DATA MODAL -->
+			<div id="myModal" class="modal">
+			  <div class="modal-content">
+			    <span class="close">x</span>
+			    <h2 class="text-center">{{ctrl.currProj.name}}</h2>
+			    <br>
+			    <div class="row">
+			    	<div class="col-sm-6">
+			    		<img class="modal-img" src="{{ctrl.currProj.img}}">
+			    	</div>
+			    	<div class="col-sm-6">
+			    		<h3>Location: {{ctrl.currProj.location}}</h3>
+			    		<h3>Prices starting from: {{ctrl.currProj.price}}</h3>
+			    		<h3>Occupancy from: {{ctrl.currProj.occupancy}}</h3>
+		    		</div>
+			    </div>
+			    
+			    <p class="text-center newFont"></p>
+			  </div>
 			</div>
 
 		</div>

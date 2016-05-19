@@ -6,7 +6,7 @@
 
 	angular
 		.module('TPapp')
-		.config(function($stateProvider, $httpProvider,$urlRouterProvider){
+		.config(function($urlRouterProvider, $stateProvider){
 
 			$urlRouterProvider.otherwise('/');
 

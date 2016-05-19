@@ -53,6 +53,12 @@ sdlfalk;sdfj
 	border: 1px solid #fff;
 }
 
+div.thumbnailHover:hover {
+	z-index: 1000;
+	background: white;
+	opacity: 0.8;
+}
+
 .toCenter {
 	text-align: center;
 }
@@ -119,6 +125,12 @@ caption {
 	float: right;
 }
 
+/*MODAL CSS*/
+.modal-img {
+	display:block;
+    margin:auto;
+    max-height: 200px;
+}
 
 
 
