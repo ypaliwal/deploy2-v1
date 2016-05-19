@@ -3,7 +3,7 @@ var express 	= require('express');
 var app			= express();
 var PORT		= 80;
 
-app.use(express.static(__dirname + './js/app'));
+app.use(express.static(__dirname + './'));
 
 
 app.listen(PORT,function(){
